@@ -1,0 +1,35 @@
+package com.hcl.decodejson;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
+import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
+
+public class DecodeJson2 {
+	public static void main(String[] args) throws IOException {
+		InputStream is = new FileInputStream("C:\\Users\\Coalesce\\Desktop\\employee.json");
+		BufferedReader buf = new BufferedReader(new InputStreamReader(is)); 
+		String line = buf.readLine(); StringBuilder sb = new StringBuilder(); 
+		while(line != null){
+			sb.append(line).append("\n"); 
+			line = buf.readLine(); 
+			} 
+		String fileAsString = sb.toString();
+		System.out.println("Contents : " + fileAsString);
+
+		  String s="{fileAsString}";  
+		    Object obj=JSONValue.parse(s);  
+		    JSONObject jsonObject = (JSONObject) obj;  
+		  
+		    String name = (String) jsonObject.get("fileAsString");  
+		    double salary = (Double) jsonObject.get("fileAsString");  
+		    long age = (Long) jsonObject.get("fileAsString");  
+		    System.out.println(name+" "+salary+" "+age);  
+	}
+
+}

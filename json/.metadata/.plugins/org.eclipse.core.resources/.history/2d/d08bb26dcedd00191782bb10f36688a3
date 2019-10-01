@@ -1,0 +1,25 @@
+package com.hcl.decodejson;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class DecodeJson {
+
+	public static void main(String[] args) throws IOException {
+		 FileReader fr=new FileReader("C:\\Users\\Coalesce\\Desktop\\employee.json");    
+         BufferedReader br=new BufferedReader(fr);   
+         int i;    
+         StringBuilder sb= new StringBuilder();
+         while((i=br.read())!=-1){  
+         sb.append((char)i);
+         }  
+         br.close();    
+         fr.close();    
+        
+   }    
+
+	}
+
+

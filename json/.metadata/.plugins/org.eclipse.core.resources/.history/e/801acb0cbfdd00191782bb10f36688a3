@@ -1,0 +1,23 @@
+package com.hcl.json;
+
+import java.util.Scanner;
+
+import org.json.simple.JSONArray;
+
+public class MultiDimentionalJSON {
+
+	public static void main(String[] args) {
+		JSONArray arr1=new JSONArray();
+		for (int i = 0; i < 3; i++) {
+			JSONArray arr2=new JSONArray();
+			Scanner sc =new Scanner(System.in);
+			arr2.add("Emp"+sc.nextInt());
+			arr2.add(1000*sc.nextInt());
+			arr2.add(25+sc.nextInt());
+			arr1.add(i,arr1);
+			
+		}
+
+	}
+
+}

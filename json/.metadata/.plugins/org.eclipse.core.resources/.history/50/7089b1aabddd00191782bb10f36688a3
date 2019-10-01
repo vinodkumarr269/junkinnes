@@ -1,0 +1,21 @@
+package com.hcl.json;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+public class Example4 {
+
+	public static void main(String[] args) {
+		JSONObject emp=new JSONObject();
+		for (int i = 0; i < 3; i++) {
+			JSONArray arr=new JSONArray();
+			arr.add("Emp"+i);
+			arr.add(1000*i);
+			arr.add(25+1);
+			emp.put(1, arr)
+			
+		}
+
+	}
+
+}

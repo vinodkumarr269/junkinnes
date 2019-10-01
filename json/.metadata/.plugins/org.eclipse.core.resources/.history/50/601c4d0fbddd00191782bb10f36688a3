@@ -1,0 +1,15 @@
+package com.hcl.json;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+public class example3 {
+	public static void main(String[] args) {
+		JSONObject ob=new JSONObject();
+		JSONArray arr=new JSONArray();
+		arr.add("vinod");
+	    arr.add(new Integer(123));
+	    arr.add(new String("ECE"));
+	}
+
+}
